@@ -14,11 +14,12 @@ public class EventManager : MonoBehaviour
 
     public void Awake()
     {
-        Screen.SetResolution(1080, 1920, true);
+        
     }
     public void GameStart()
     {
-        if(GameStatus)
+        Screen.SetResolution(1080, 1920, true);
+        if (GameStatus)
         {
             OnClicked?.Invoke();
             GameStatus = false;

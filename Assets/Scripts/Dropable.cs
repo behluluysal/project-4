@@ -37,10 +37,12 @@ public class Dropable : MonoBehaviour
             EventManager.OnDrop -= DropItem;
             CancelInvoke("DestroyMe");
             gameObject.transform.parent = GameObject.FindGameObjectWithTag("PlayerCart").transform;
-            LeanTween.moveY(this.gameObject, 2, 0.5f).setOnComplete(() => {
-                LeanTween.moveX(gameObject, Random.Range(-1, 2), 1f);
-                LeanTween.moveY(gameObject, 0, 1f).setEaseInOutSine();
-                LeanTween.rotateY(gameObject, 90, 1f).setEaseInOutSine();
+            gameObject.GetComponent<Collider>().enabled = false;
+            LeanTween.moveLocalY(this.gameObject, 2.5f, 0.5f).setOnComplete(() => {
+                gameObject.transform.localScale = new Vector3(5f, 5f, 5f);
+                LeanTween.moveLocalX(gameObject, Random.Range(-1.4f, 2.5f), 1f);
+                LeanTween.moveLocalZ(gameObject, Random.Range(-2, 1f), 1f).setEaseInOutSine();
+                LeanTween.rotateLocal(gameObject, new Vector3(0,0,0),1f);
             }) ;
         }
     }
