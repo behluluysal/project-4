@@ -26,10 +26,6 @@ public class MoveCart : MonoBehaviour
             EventManager.DropItems();
             StartCoroutine(WaitAndSpawn(2f));
         }
-        if(other.CompareTag("Finish"))
-        {
-            
-        }
     }
 
     private IEnumerator WaitAndSpawn(float waitTime)
