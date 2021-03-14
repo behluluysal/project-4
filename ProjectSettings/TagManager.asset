@@ -7,6 +7,9 @@ TagManager:
   - WayPoint
   - Cart
   - PlayerCart
+  - endCharacter
+  - sword
+  - endCartLocation
   layers:
   - Default
   - TransparentFX
