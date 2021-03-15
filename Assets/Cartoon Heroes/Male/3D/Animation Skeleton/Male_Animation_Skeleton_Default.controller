@@ -607,7 +607,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Male Sword Sprint
+  m_Name: Sword Sprint
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -723,7 +723,7 @@ AnimatorStateMachine:
     m_Position: {x: 1656, y: 228, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102924031727420378}
-    m_Position: {x: 576, y: 276, z: 0}
+    m_Position: {x: 430, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102332064981782274}
     m_Position: {x: 360, y: 228, z: 0}

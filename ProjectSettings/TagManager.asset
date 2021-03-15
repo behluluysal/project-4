@@ -10,6 +10,8 @@ TagManager:
   - endCharacter
   - sword
   - endCartLocation
+  - endGameLocation
+  - endGameLocationRun
   layers:
   - Default
   - TransparentFX
