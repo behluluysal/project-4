@@ -33,7 +33,7 @@ public class EventManager : MonoBehaviour
     private void Update()
     {
         transform.position = Vector3.Lerp(transform.position,
-                                           player.transform.position + new Vector3(0, 4, -10),
+                                           player.transform.position + new Vector3(0, 5, -15),
                                            5f * Time.deltaTime);
     }
 }

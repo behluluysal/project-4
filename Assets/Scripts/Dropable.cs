@@ -10,7 +10,7 @@ public class Dropable : MonoBehaviour
     void DropItem()
     {
         gameObject.GetComponent<Collider>().enabled = true;
-        LeanTween.moveX(this.gameObject, Random.Range(-5, 4), 0.5f);
+        LeanTween.moveX(this.gameObject, Random.Range(-4, 3), 0.5f);
         LeanTween.moveY(this.gameObject, 0, 0.5f);
         LeanTween.moveZ(this.gameObject, transform.position.z -2, 0.5f).setOnComplete(()=> { gameObject.transform.parent = null; Invoke("DestroyMe", 2.0f); });
     }
