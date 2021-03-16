@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
             if (_touch.phase == TouchPhase.Moved)
             {
                 // LeanTween.moveX(player, transform.position.x + _touch.deltaPosition.x * 0.02f, 0.1f);
-                transform.position = new Vector3(transform.position.x + _touch.deltaPosition.x * 0.003f, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x + _touch.deltaPosition.x * 0.005f, transform.position.y, transform.position.z);
             }
         }
     }
