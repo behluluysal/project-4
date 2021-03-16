@@ -21,6 +21,7 @@ public class EventManager : MonoBehaviour
 
     public void Awake()
     {
+        Screen.SetResolution(1080, 1920, true);
         if (Instance == null)
         {
 
@@ -34,13 +35,7 @@ public class EventManager : MonoBehaviour
     }
     public void GameStart()
     {
-        Screen.SetResolution(1080, 1920, true);
-        if (GameStatus)
-        {
-            player.GetComponent<Animator>().Play("Sword Sprint");
-            OnClicked?.Invoke();
-            GameStatus = false;
-        }
+        
     }
     public static void DropItems()
     {
@@ -62,6 +57,15 @@ public class EventManager : MonoBehaviour
         else
         {
             scoreText.text = "Soldiers Needed: " + (5-level-Score);
+        }
+
+        
+        if (GameStatus && (Input.touchCount >= 1))
+        {
+            GameObject.Find("Button").SetActive(false);
+            player.GetComponent<Animator>().Play("Sword Sprint");
+            OnClicked?.Invoke();
+            GameStatus = false;
         }
     }
 }

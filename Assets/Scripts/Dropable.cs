@@ -27,7 +27,8 @@ public class Dropable : MonoBehaviour
 
     private void DestroyMe()
     {
-        Destroy(gameObject, 2f);
+        if(gameObject.transform.parent.name != "PlayerCart")
+            Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
