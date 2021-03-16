@@ -17,7 +17,7 @@ public class MoveCart : MonoBehaviour
     }
     void StartMove()
     {
-        LeanTween.moveZ(this.gameObject, 440, 20);
+        LeanTween.moveZ(this.gameObject, 500, 20);
     }
     private void OnTriggerEnter(Collider other)
     {

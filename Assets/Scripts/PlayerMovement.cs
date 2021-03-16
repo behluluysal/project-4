@@ -48,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void StartMove()
     {
-        LeanTween.moveZ(this.gameObject, 420, 20);
+        LeanTween.moveZ(this.gameObject, 420, 20).setOnComplete(()=> {
+            gameObject.GetComponent<Animator>().Play("Idle");
+        });
     }
 }
